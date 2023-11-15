@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/2023/08/25/opencl-study/"/>
+      <url>/2023/08/25/opencl-study/</url>
+      
+        <content type="html"><![CDATA[<h1 id="OpenCL-笔记"><a href="#OpenCL-笔记" class="headerlink" title="OpenCL 笔记"></a>OpenCL 笔记</h1><h2 id="平台模型"><a href="#平台模型" class="headerlink" title="平台模型"></a>平台模型</h2><p>一个主机和一个或者多个设备就是一个平台。</p><ul><li>一个设备包含多个计算单元(设备就是常说的显卡。在英伟达显卡中，计算单元是SM，相当于一个核心)<ul><li>一个计算单元多个处理单元(对应于英伟达显卡上的sp)</li></ul></li></ul><p>数据就是运行在处理单元上的，多个数据执行相同的代码，实现数据级并行。</p><h2 id="执行模型"><a href="#执行模型" class="headerlink" title="执行模型"></a>执行模型</h2><p>z’g</p><h2 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/08/21/operation-and-hardware-development/"/>
+      <url>/2023/08/21/operation-and-hardware-development/</url>
+      
+        <content type="html"><![CDATA[<h1 id="操作系统以及硬件的发展"><a href="#操作系统以及硬件的发展" class="headerlink" title="操作系统以及硬件的发展"></a>操作系统以及硬件的发展</h1><p>本文主要从最初的计算机问世到2000年这大约50年的时间，操作系统和硬件是怎么随着用户的需求一步步发展的，最终形成现在的操作系统的样子。</p><p>我们首先按照年代进行发展，然后就是按照英特尔和Linux怎么相互促进。</p><h2 id="年代发展"><a href="#年代发展" class="headerlink" title="年代发展"></a>年代发展</h2><h3 id="20世纪40年代"><a href="#20世纪40年代" class="headerlink" title="20世纪40年代"></a>20世纪40年代</h3><p>最初的计算机是在40年代出现的，那个时候是通过一些机械开关来进行<a href="https://www.youtube.com/watch?v=nITFvyBI72Y">编程</a>。并且通常只有一个任务在运行。</p><p>这个时候能做出来计算机已经很厉害了。</p><h3 id="20世纪50年代"><a href="#20世纪50年代" class="headerlink" title="20世纪50年代"></a>20世纪50年代</h3><p>到了1950年代初的时候，出现了晶体管，计算能力变强了。并且这个时候出现了机器语言，我们可以在纸带上进行编程(这个确实比插线板方便了一些)。这个时候有了纸带机来读取了。因为编程方便之后，人们就开始折腾了，就出现了我们在操作系统课上学的<strong>批处理系统</strong>。</p><p>那个时候一个任务在开始和结束的时候或者出现错误的时候，需要一个专门的工作人员在那里鼓捣好久，这个时候机器是闲置的。于是就出现了批处理系统，一次输入多个进程的，这个时候就不会有限制了嘛。这就是进步，虽然现在看起来还好，但是想一想那个时候的人们锤子都没有，做一个这个功能还是可以的。并且，在这个时候我们就有了<strong>驱动</strong>的概念。因为我们需要机器来自动的控制磁带机来读取磁带上的信息，所以有了一个组织专门开发的控制的程序。</p><p>其实这个已经有了操作系统的雏形了，他有了一个<code>monitor</code>来监控多个任务的执行，虽然是顺序执行的。同时，他也有了一个库来操作磁带。虽然这个只是简单的转动磁带机的功能，并没有提供现代硬件的虚拟的功能。</p><p>初次之外，ERA 1103A这台机器首次引入了<code>中断机制</code>，这样就可以中断机器操作用来处理其他的事情。它使更复杂的监控系统成为可能，并且对于开发多道程序设计（以及后来的分时）系统至关重要。</p><p>并且，在这段时候中，不仅机器的操作员要自动化，程序员也需要自动化。这促进了编程语言的发展，Fortran语言出现了。这样就可以帮助我们自动完成二进制和十进制之间的转换。并且这个时候的Fortran就可以使用驱动来帮助我们自动化倒带。</p><p>现在我们在详细说一下批处理系统发展的一些细节。他的概念出现在商业计算机中，商业计算比科学计算的任务更加重复，所以对自动化处理任务的需要越紧迫。</p><p>我们来看一下最初的机器的工作方式：</p><ul><li>首先，多个任务的磁带被放在一个727磁带上面，这个磁带上的任务大概是一个小时的任务。这个时候有一个常驻的监视器和一个控制程序的磁带。结果可以输出到磁带上。可以随时更换。</li><li>对于这个常驻监视器来说，他首先需要翻译程序，就是将十进制翻译为二进制。将源程序翻译为目标代码。之后就是执行代码。最后就是自动的将结果输出到磁带上面。</li></ul><p>对于这段事件来说，还有一些专用的操作系统的诞生。比如军事操作系统和工业操作系统。</p><h3 id="20世纪60年代"><a href="#20世纪60年代" class="headerlink" title="20世纪60年代"></a>20世纪60年代</h3><p>整个60年代操作系统最重要的发展就是分时系统。在50年代的时候，这个词注意是硬件那边的，因为那个时候电话线的时分复用。并且硬件也会分时，处理不同的硬件。</p><p>当时有两种思想，一种思想是一台电脑为多个用户提供服务，这是站在普通用户的角度。另一种思想是因为当时已经有了调试的概念。我们硬件的中断来进行调试，在这个时候别的程序是没有办法的运行的。(其实有一点CPU和硬件速度不匹配的意思了)，然后就有了多道程序的诞生。</p><p>随着多道操作系统的出现，分时操作系统自然也就出现了，这里我们就不细说了。在unix操作系统出现之前操作系统的答题发展就是这样，因为什么样子的需求所以出现什么样子的操作系统。</p><p>顺便介绍一下一位大佬,<a href="https://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)">John McCarthy</a>，lisp语言、分时系统、垃圾回收算法。</p><p>他当时提出了分时系统在未来可以变成一种类似于水电的公共服务。这句话在现在看来是完成正确的，无论现在的云，还是几年前的服务器。</p><h2 id="Linux和英特尔"><a href="#Linux和英特尔" class="headerlink" title="Linux和英特尔"></a>Linux和英特尔</h2><p>虽然平时Wintel联盟是我们平时讨论的比较多的，但是我们这里主要是看一下Linux和Intel芯片之前的相互促进。</p><h2 id="如何实现一个操作系统"><a href="#如何实现一个操作系统" class="headerlink" title="如何实现一个操作系统"></a>如何实现一个操作系统</h2><p>想要实现一个操作系统，我们就要深入的了解这个操作系统是怎么运作的，而不是简单的了解他的功能。但是我们可以通过操作系统提供的功能逆推出来一些东西。</p><p><img src="/2023/08/21/operation-and-hardware-development/app-software-stack.png"></p><p>我们的应用(比如一个hello world)位于最上层，它可以通过调用编程语言提供的标准库或者其他三方库对外提供的函数接口，使得仅需少量的源代码就能完成复杂的功能。但是这些库的功能不仅限于此，事实上它们属于应用程序的范畴。在我们通常不会注意到的地方，这些软件库还会在执行应用之前完成一些初始化工作，并在应用程序执行的时候对它进行监控。我们使用C语言的<code>print</code>就是glibc的功能。</p><p>从操作系统内核的角度看来，它上面的一切都属于用户态软件，而它自身属于内核态软件。无论用户态应用如何编写，是手写汇编代码，还是基于某种高级编程语言调用其标准库或三方库，某些功能总要直接或间接的通过操作系统内核提供的 系统调用 (System Call) 来实现。因此系统调用充当了用户和内核之间的边界。内核作为用户态软件的执行环境，它不仅要提供系统调用接口，还需要对用户态软件的执行进行监控和管理。</p><p>可以使用<code>strace</code>查看这个程序使用了多少系统调用。</p><p>只有write和exit_group是我们程序需要的，剩下的系统调用都是用于函数库和内核两层执行环境的初始化工作和对上层应用的运行进行监控和管理。</p><p>可以看到现代的操作系统为我们添加了太多的冗余的东西，为了通用性，而实现了大量的功能。</p><p>从硬件的角度来看，它上面的一切都属于软件。硬件可以分为三种： 处理器 (Processor，也称CPU)，内存 (Memory) 还有 I&#x2F;O 设备。其中处理器无疑是其中最复杂，同时也最关键的一个。它与软件约定一套 指令集体系结构 (ISA, Instruction Set Architecture)，使得软件可以通过 ISA 中提供的机器指令来访问各种硬件资源。软件当然也需要知道处理器会如何执行这些指令，以及指令执行后的结果。当然，实际的情况远比这个要复杂得多，为了适应现代应用程序的场景，处理器还需要提供很多额外的机制（如特权级、页表、TLB、异常&#x2F;中断响应等）来管理应用程序的执行过程，而不仅仅是让数据在 CPU 寄存器、内存和 I&#x2F;O 设备三者之间流动。</p><p>从这个程序来看，似乎操作系统就是一个库，我们可以直接调用它。需要注意的是，这里和我们平时编程的时候用的库是不同的，不是单纯的调用的函数。单纯的调用函数的是编程语言的标准库为我们提供的，标准库中的做法就是来使用系统调用。</p><p>现在我们大概了解操作系统做了什么，现在我们要看一下他是怎么做的。</p><h3 id="设计操作系统"><a href="#设计操作系统" class="headerlink" title="设计操作系统"></a>设计操作系统</h3><p>操作系统要一直运行，如果没有任务他就在那里停滞。所以很容易想到，操作系统的大的架构应该是一个死循环。每次有任务的时候就可以跳出死循环，至于跳出循环的方法就可以使用中断的方式。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span><span class="comment">/* This really IS void, no error here. */</span></span><br><span class="line">&#123;<span class="comment">/* The startup routine assumes (well, ...) this */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Interrupts are still disabled. Do necessary setups, then</span></span><br><span class="line"><span class="comment"> * enable them</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> ROOT_DEV = ORIG_ROOT_DEV;</span><br><span class="line"> drive_info = DRIVE_INFO;</span><br><span class="line">memory_end = (<span class="number">1</span>&lt;&lt;<span class="number">20</span>) + (EXT_MEM_K&lt;&lt;<span class="number">10</span>);</span><br><span class="line">memory_end &amp;= <span class="number">0xfffff000</span>;</span><br><span class="line"><span class="keyword">if</span> (memory_end &gt; <span class="number">16</span>*<span class="number">1024</span>*<span class="number">1024</span>)</span><br><span class="line">memory_end = <span class="number">16</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span><br><span class="line"><span class="keyword">if</span> (memory_end &gt; <span class="number">12</span>*<span class="number">1024</span>*<span class="number">1024</span>) </span><br><span class="line">buffer_memory_end = <span class="number">4</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (memory_end &gt; <span class="number">6</span>*<span class="number">1024</span>*<span class="number">1024</span>)</span><br><span class="line">buffer_memory_end = <span class="number">2</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">buffer_memory_end = <span class="number">1</span>*<span class="number">1024</span>*<span class="number">1024</span>;</span><br><span class="line">main_memory_start = buffer_memory_end;</span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> RAMDISK</span></span><br><span class="line">main_memory_start += rd_init(main_memory_start, RAMDISK*<span class="number">1024</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">mem_init(main_memory_start,memory_end);</span><br><span class="line">trap_init();</span><br><span class="line">blk_dev_init();</span><br><span class="line">chr_dev_init();</span><br><span class="line">tty_init();</span><br><span class="line">time_init();</span><br><span class="line">sched_init();</span><br><span class="line">buffer_init(buffer_memory_end);</span><br><span class="line">hd_init();</span><br><span class="line">floppy_init();</span><br><span class="line">sti();</span><br><span class="line">move_to_user_mode();</span><br><span class="line"><span class="keyword">if</span> (!fork()) &#123;<span class="comment">/* we count on this going ok */</span></span><br><span class="line">init();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *   NOTE!!   For any other task &#x27;pause()&#x27; would mean we have to get a</span></span><br><span class="line"><span class="comment"> * signal to awaken, but task0 is the sole exception (see &#x27;schedule()&#x27;)</span></span><br><span class="line"><span class="comment"> * as task 0 gets activated at every idle moment (when no other tasks</span></span><br><span class="line"><span class="comment"> * can run). For task0 &#x27;pause()&#x27; just means we go check if some other</span></span><br><span class="line"><span class="comment"> * task can run, and if not we return here.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">for</span>(;;) pause();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这是最初版的Linux内核，就是一个死循环，(现代操作系统不会这样了，说是死循环的时候加些定语)在此之前将功能模块初始化完成。</p><p>每当有一个事件的时候，可以通过中断来进行切换。</p><p>那么现在的问题是我们有了这个操作系统，我们怎么启动它。</p><p>首先考虑一下，如果没有操作系统，我们应该怎么跑一个程序，就是简单输出一个hello world。</p><p>这个时候没有库，我们只能写汇编代码(更准确的说应该是二进制，但是假设我们现在有编译器)写到显卡的上，然后显卡就可以将字符显示到屏幕上。(这个地方应该是显卡的驱动的进行工作的)</p><p>现在又有了一个问题，我电脑怎么加载你的程序呢？</p><p>就是你确实将你的代码写好了，然后通过一些方式写到了磁盘上。有操作系统的时候，我们可以将可执行文件通过加载程序来运行，通过解析ELF或者PE的格式，将里面的信息加载到虚拟地址，将PC指向_start就可以了。但是我们没有了操作系统，就有了麻烦了。</p><p>我们在回到我们的问题，现在你已经有了一个程序，二进制的，但是不知道怎么启动他。</p><p>我们现在在来逆推一下，运行一个程序我们需要把他加载进磁盘吧。这部分汇编可以写，就是一个磁盘驱动，我们可以读出来。当然，这个时候你需要把你程序在磁盘的什么地方制定出来。之后就是将PC指到这个地方就可以了。</p><p>那么问题我们这个加载磁盘的程序又是怎启动的呢？总不能套娃吧，关键是套娃也不能解决问题。所以我们需要一个程序是可以自动运行的，不是从磁盘中加载到内存的，这个就是ROM中的程序。每次通电之后，硬件就会自动的跳转到RAM中的程序，这个程序简单来说是一个加载磁盘中内容的程序(实际上他还可能做一些硬件检测)。把程序加载到内存中我们就可以运行了。</p><p>那么这个时候我们就需要一些规定了，因为ROM的要知道要从磁盘的什么地方来加载这个程序。不然你只能针对不同的程序设置不同的写不同的ROM，这是很麻烦(我们电脑上的RAM是可以更改的，比如你升级系统或者刷bios的时候)。</p><p>我们来做一个实验。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/08/21/shell-tips/"/>
+      <url>/2023/08/21/shell-tips/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Shell-Tips"><a href="#Shell-Tips" class="headerlink" title="Shell-Tips"></a>Shell-Tips</h1><p>这篇文章主要记录一些经常用的shell技巧，无论是常用的shell命令还是一些组合。</p><p>整篇文章分为几章，分别是命令、命令组合以及常用技巧。</p><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><p>这里不会有诸如<code>ls</code>这样的简单命令。这里的命令都是一些实用的，但是平时用的少的命令。</p><h2 id="命令组合"><a href="#命令组合" class="headerlink" title="命令组合"></a>命令组合</h2><p>这里是一些常见的命令组合，用来完成一些特定的任务。</p><h2 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h2><p>这个命令主要是进行排序。</p><p>他会</p><h3 id="sort-uniq-c"><a href="#sort-uniq-c" class="headerlink" title="sort|uniq -c"></a>sort|uniq -c</h3><p>这个组合是统计不同结果出现的次数。</p><p>当你的程序的输出是重复的、随机的，你可以用这个来统计输出，他会输出每种结果出现的次数。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2023/08/21/mongodb/"/>
+      <url>/2023/08/21/mongodb/</url>
+      
+        <content type="html"><![CDATA[<h1 id="怎么使用MongoDB"><a href="#怎么使用MongoDB" class="headerlink" title="怎么使用MongoDB"></a>怎么使用MongoDB</h1><h2 id="MongoDB的启动"><a href="#MongoDB的启动" class="headerlink" title="MongoDB的启动"></a>MongoDB的启动</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用docker搭建hexo博客</title>
+      <link href="/2023/08/19/5w2h-godweiyang/"/>
+      <url>/2023/08/19/5w2h-godweiyang/</url>
+      
+        <content type="html"><![CDATA[<p>之前一直是由博客的，但是由于各种问题就放弃了。之后就一直使用飞书做笔记，不得不说飞书确实是个好东西，不用找图床，图片直接复制粘贴，支持视频等其他各种各样的东西。</p><p>但是最近还是想搞一个博客，但是之前使用hexo的时候体验并不好，主要是各种环境需要部署。要是一旦生产环境中需要node，这个时候就会非常麻烦。</p><p>但是现在有了docker这些东西，我们就可以不污染我们的环境了， 我们使用docker来部署node和hexo这些环境，将hexo中的<code>source</code>、<code>themes</code>和<code>_config.yml</code>这些文件当作共享卷来使用。这样就可以使用docker容器中的环境来部署到GitHub上了。并且我们可以把<code>_config.yml</code>中的私密的信息单独建一个仓库来存放。这样也就不怕之前写的文章丢失，总的来说还是比较方便的。</p><p>鼓捣了大约一天多，基本弄得差不多了。现在我就想到了这些，如果你有更好的方法，我们可以在交流讨论。写博客的目的主要是记录学到的东西，如果搭建博客的过程太费劲，每一次迁移的过程费劲，那真不如用飞书那种。<br><img src="/2023/08/19/5w2h-godweiyang/favicon.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

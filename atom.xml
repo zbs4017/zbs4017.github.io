@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>张兵帅的博客</title>
+  
+  
+  <link href="https://zbs4017.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://zbs4017.github.io/"/>
+  <updated>2023-08-25T01:56:33.489Z</updated>
+  <id>https://zbs4017.github.io/</id>
+  
+  <author>
+    <name>张兵帅</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://zbs4017.github.io/2023/08/25/opencl-study/"/>
+    <id>https://zbs4017.github.io/2023/08/25/opencl-study/</id>
+    <published>2023-08-25T00:43:56.717Z</published>
+    <updated>2023-08-25T01:56:33.489Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;OpenCL-笔记&quot;&gt;&lt;a href=&quot;#OpenCL-笔记&quot; class=&quot;headerlink&quot; title=&quot;OpenCL 笔记&quot;&gt;&lt;/a&gt;OpenCL 笔记&lt;/h1&gt;&lt;h2 id=&quot;平台模型&quot;&gt;&lt;a href=&quot;#平台模型&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://zbs4017.github.io/2023/08/21/operation-and-hardware-development/"/>
+    <id>https://zbs4017.github.io/2023/08/21/operation-and-hardware-development/</id>
+    <published>2023-08-21T13:44:43.592Z</published>
+    <updated>2023-08-26T13:53:28.527Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;操作系统以及硬件的发展&quot;&gt;&lt;a href=&quot;#操作系统以及硬件的发展&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://zbs4017.github.io/2023/08/21/shell-tips/"/>
+    <id>https://zbs4017.github.io/2023/08/21/shell-tips/</id>
+    <published>2023-08-21T09:07:52.344Z</published>
+    <updated>2023-08-21T09:15:11.980Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Shell-Tips&quot;&gt;&lt;a href=&quot;#Shell-Tips&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://zbs4017.github.io/2023/08/21/mongodb/"/>
+    <id>https://zbs4017.github.io/2023/08/21/mongodb/</id>
+    <published>2023-08-21T09:05:12.828Z</published>
+    <updated>2023-08-21T09:07:26.324Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;怎么使用MongoDB&quot;&gt;&lt;a href=&quot;#怎么使用MongoDB&quot; class=&quot;headerlink&quot; title=&quot;怎么使用MongoDB&quot;&gt;&lt;/a&gt;怎么使用MongoDB&lt;/h1&gt;&lt;h2 id=&quot;MongoDB的启动&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>使用docker搭建hexo博客</title>
+    <link href="https://zbs4017.github.io/2023/08/19/5w2h-godweiyang/"/>
+    <id>https://zbs4017.github.io/2023/08/19/5w2h-godweiyang/</id>
+    <published>2023-08-19T12:46:48.007Z</published>
+    <updated>2023-08-20T04:08:30.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前一直是由博客的，但是由于各种问题就放弃了。之后就一直使用飞书做笔记，不得不说飞书确实是个好东西，不用找图床，图片直接复制粘贴，支持视频等其他各种各样的东西。&lt;/p&gt;
+&lt;p&gt;但是最近还是想搞一个博客，但是之前使用hexo的时候体验并不好，主要是各种环境需要部署。要是一旦生</summary>
+        
+      
+    
+    
+    
+    <category term="博客搭建" scheme="https://zbs4017.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="docker" scheme="https://zbs4017.github.io/tags/docker/"/>
+    
+    <category term="博客" scheme="https://zbs4017.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+</feed>
