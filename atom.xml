@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人见闻录</title>
+  
+  
+  <link href="https://zbs4017.top/atom.xml" rel="self"/>
+  
+  <link href="https://zbs4017.top/"/>
+  <updated>2024-12-26T04:10:31.814Z</updated>
+  <id>https://zbs4017.top/</id>
+  
+  <author>
+    <name>张兵帅</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://zbs4017.top/2024/12/26/hello-world/"/>
+    <id>https://zbs4017.top/2024/12/26/hello-world/</id>
+    <published>2024-12-26T04:10:31.814Z</published>
+    <updated>2024-12-26T04:10:31.814Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>上下文无关文法</title>
+    <link href="https://zbs4017.top/post/context-has-nothing-to-do-with-z2unujt.html"/>
+    <id>https://zbs4017.top/post/context-has-nothing-to-do-with-z2unujt.html</id>
+    <published>2024-12-26T03:03:53.000Z</published>
+    <updated>2024-12-26T04:10:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;第一次学编译原理的时候就听到了这个名词，然后就稀里糊涂的开始学词法分析、语法分析、first集、follow集，然后就是各种算法，但是最近回过头来重新学编译原理，发现自己连上下文无关文法是什么都不是很清楚。&lt;/p&gt;
+&lt;p&gt;所以这篇博客主要是简单的说明上下文无关文法是什么，他</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>链接器如何处理静态库</title>
+    <link href="https://zbs4017.top/post/how-to-deal-with-the-static-library-1hrjwo.html"/>
+    <id>https://zbs4017.top/post/how-to-deal-with-the-static-library-1hrjwo.html</id>
+    <published>2024-12-15T14:18:21.000Z</published>
+    <updated>2024-12-15T14:23:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在软件开发中，链接是将各个编译单元组合成最终的可执行文件或库的关键步骤。对于使用 GNU 工具链（例如 GCC、G++）的开发者来说，理解链接器 &lt;code&gt;ld&lt;/code&gt;​ 的工作原理至关重要。本文将深入探讨 GNU</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>clangd踩坑</title>
+    <link href="https://zbs4017.top/post/clangd-step-on-the-pit-z1mtuml.html"/>
+    <id>https://zbs4017.top/post/clangd-step-on-the-pit-z1mtuml.html</id>
+    <published>2024-10-08T10:02:12.000Z</published>
+    <updated>2024-10-08T12:40:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;记一次clangd踩坑的经历，算是对clangd的整个原理有一个初步的了解把。&lt;/p&gt;
+&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客工作流</title>
+    <link href="https://zbs4017.top/post/blog-workflow-m2fhx.html"/>
+    <id>https://zbs4017.top/post/blog-workflow-m2fhx.html</id>
+    <published>2024-09-06T08:11:13.000Z</published>
+    <updated>2024-09-06T08:39:43.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;博客工作流&quot;&gt;&lt;a href=&quot;#博客工作流&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://zbs4017.top/tags/hexo/"/>
+    
+    <category term="博客" scheme="https://zbs4017.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中断处理</title>
+    <link href="https://zbs4017.top/post/interrupt-treatment-z1e95yf.html"/>
+    <id>https://zbs4017.top/post/interrupt-treatment-z1e95yf.html</id>
+    <published>2024-09-05T09:56:17.000Z</published>
+    <updated>2024-09-05T12:42:31.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;http://pic.zbs4017.top/interrupts-20240905175725-vjman95.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;中断处理&quot;&gt;&lt;a href=&quot;#中断处理&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://zbs4017.top/tags/Linux/"/>
+    
+    <category term="中断" scheme="https://zbs4017.top/tags/%E4%B8%AD%E6%96%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sizeof 大小计算</title>
+    <link href="https://zbs4017.top/post/sizeof-size-calculation-2mvg8s.html"/>
+    <id>https://zbs4017.top/post/sizeof-size-calculation-2mvg8s.html</id>
+    <published>2024-08-09T08:54:27.000Z</published>
+    <updated>2024-09-06T09:24:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;sizeof-大小计算&quot;&gt;&lt;a href=&quot;#sizeof-大小计算&quot; class=&quot;headerlink&quot; title=&quot;sizeof 大小计算&quot;&gt;&lt;/a&gt;sizeof</summary>
+        
+      
+    
+    
+    
+    
+    <category term="cpp" scheme="https://zbs4017.top/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>返回值优化汇编分析</title>
+    <link href="https://zbs4017.top/post/back-value-optimization-z8yxga.html"/>
+    <id>https://zbs4017.top/post/back-value-optimization-z8yxga.html</id>
+    <published>2024-06-17T08:38:06.000Z</published>
+    <updated>2024-09-06T10:11:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;返回值优化是一个很经典的问题，很多面试官也会针对返回值优化和拷贝复制和移动复制问一些问题。&lt;/p&gt;
+&lt;p&gt;当一个&lt;strong&gt;未命名且未绑定到任何引用的临时变量&lt;/strong&gt;被移动或复制到一个相同的对象时，拷贝和移动构造可以被省略。当这个临时对象在被构造的时候，他会直</summary>
+        
+      
+    
+    
+    
+    
+    <category term="cpp" scheme="https://zbs4017.top/tags/cpp/"/>
+    
+  </entry>
+  
+</feed>
